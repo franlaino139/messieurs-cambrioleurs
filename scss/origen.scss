@@ -1,0 +1,2585 @@
+/*prueba*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,article, form, nav {
+    margin-left: 10px;
+}
+
+@media (max-width: 599px) {
+
+
+/* Inicio Grids Index mobile */ 
+
+
+.grilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "arriba"
+    "abajo"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+}
+
+
+
+.fondoVinedo{
+    grid-area: arriba;
+    background-image: url(../imgs/vinedouvas4.png);
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo titulo titulo titulo"
+    ". . subtitulo subtitulo subtitulo subtitulo . ."
+    ". . . . . . . ."
+    "coleccion coleccion coleccion coleccion coleccion coleccion coleccion coleccion"
+    ;
+    grid-template-columns: 15% 10% 10% 15% repeat(4, 1fr);
+    grid-template-rows: 5% 5% 10% 30%;
+
+}
+
+
+
+#tituloIndex {
+    grid-area: titulo;
+    color: white;
+    font-size: 28px;
+    font-family:'Cinzel', serif;;
+    text-shadow: #181818 1px 0 10px;
+
+
+}
+
+.tituloPags {
+    font-size: 60px;
+    font-family:'Cinzel', serif;;
+
+}
+
+.fuenteCursiva {
+    font-family: 'Comfortaa';
+    color: white;
+
+}
+
+#vvSubtitulo {
+    grid-area: subtitulo;
+    font-size: 15px;
+
+}
+
+
+.linksMobileIndex {
+    display: flex;
+    font-family: 'Cinzel';
+    font-size: 23px;
+}
+
+ul {
+    li {
+    display: inline;
+    font-family: 'Cinzel';
+    font-size: 23px;
+    }
+}
+
+.menuLinks {
+    display: none;
+    grid-area: links;
+    margin-top: 30px;
+}
+
+.linksUno {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.fondoSierra {
+    grid-area: abajo;
+    display: grid;
+    grid-template-areas: 
+    ". . . . . . . ."
+    ". . . . . . cuadroPie . "
+    "pie pie pie pie pie pie cuadroPie rellenoPie "
+    ;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 30% 5% 65%;
+
+}
+
+
+.menuLinksPie {
+    width: max-content;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.linksDos {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.linksTres{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.pie {
+    grid-area: pie;
+    color: white;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+.rellenoPie {
+    grid-area: rellenoPie;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+
+#cuadroPie {
+    grid-area: cuadroPie;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+    background-color: #4d292f;
+    border: black 3px solid;
+
+}
+
+input, select {
+    font-family: Cinzel;
+    font-size: 20px;
+    background-color: #4d292f;
+    color: white;
+}
+
+
+.coleccionIndex {
+    grid-area: coleccion;
+    display: grid;
+    grid-template-areas: 
+    ". tCol tCol"
+    "imgCol textCol textCol"
+    ". btnCol btnCol"
+    ;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 10% 70% 30%;
+    background-color: white;
+    border: solid rgb(204, 204, 204) 5px;
+}
+
+#imgColeccion {
+    grid-area: imgCol;
+    border-radius: 25px;
+    border-color: rgb(218, 218, 218);
+    border-style: solid;
+    width: 100%;
+    height: 20vh;
+    margin-left: 15px;
+}
+
+#tituloColeccion {
+    text-align: center;
+    grid-area: tCol;
+    font-family: 'Cinzel';
+    font-size: 28px;
+}
+
+#cuerpoColeccion {
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: textCol;
+    font-size: 12px;
+    font-family: 'Comfortaa';
+    text-justify: distribute;
+}
+
+.botonIndex {
+    grid-area: btnCol;
+    font-size: 13px;
+    font-family: 'Comfortaa';
+    width: max-content;
+    height: max-content;
+    transition: all 1s;
+    justify-self: center;
+}
+
+
+.cosechaIndex {
+    display: none;
+    grid-area: cosecha;
+    display: grid;
+    grid-template-areas: 
+    "nombreCos imgCos sobreCos"
+    ". imgCos textCos"
+    "añoCos imgCos btnCos"
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+#nombreCosecha {
+    display: none;
+    grid-area: nombreCos;
+    font-family: 'Cinzel';
+    font-size: 35px;
+    align-self: center;
+    text-align: center;
+}
+
+#añoCosecha {
+    display: none;
+    grid-area: añoCos;
+    font-family: 'Cinzel';
+    font-size: 45px;
+    text-align: center;
+
+}
+
+#imgCosecha {
+    display: none;
+    grid-area: imgCos;
+    align-self: center;
+    justify-self: center;
+}
+
+#sobreCosecha {
+    display: none;
+    grid-area: sobreCos;
+    font-family: 'Cinzel';
+    align-self: center;
+    text-align: center;
+    font-size: 32px;
+
+}
+
+#infoCosecha {
+    display: none;
+    grid-area: textCos;
+    font-size: 24px;
+    font-family: 'Comfortaa';
+    text-align: center;
+
+
+}
+
+#botonCosecha {
+    display: none;
+    grid-area: btnCos;
+    font-family: 'Comfortaa';
+    transition: all 1s;
+    font-size: 24px;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    justify-self: center;
+
+}
+
+#botonCosecha:hover {
+    font-size: 27px;
+}
+
+/* Fin Grids Index mobile */ 
+
+
+
+body {
+    display: grid;
+}
+
+/*comienzo grids Contacto mobile*/
+
+
+.grillaContacto {
+    background-image: url(../imgs/leaves.jpg);
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "menuLinks menuLinks menuLinks"
+    "fondoBlanco fondoBlanco fondoBlanco"
+    "titulo titulo titulo"
+    "contacto contacto contacto"
+    "contacto contacto contacto"
+    ". . ."
+    ". cuadro ."
+    ". cuadro .";
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: 10% 5% 12% 25% 25% 3% 10% 10%;
+
+}
+
+.menuLinksIzq {
+    text-align: center;
+}
+
+.cuadroIzq {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+
+}
+
+.linksIzq {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 20px;
+}
+
+
+.imgIzquierdaContacto {
+    grid-area: menuLinks;
+    font-family: 'Comfortaa';
+}
+
+.fondoTitulo {
+    grid-area: titulo;
+    background-color: white;
+}
+
+.tituloMobile {
+    font-family: 'Cinzel';
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+    align-self: center;
+}
+
+.titulo {
+    display: none;
+}
+
+.fondoBlanco {
+    grid-area: fondoBlanco;
+    background-color: white;
+}
+
+.contDerechaContacto {
+    grid-area: contacto;
+    background-color: white;
+}
+
+
+
+.duda {
+    text-align: center;
+    font-family: 'Comfortaa';
+
+}
+
+.email {
+    font-family: 'Comfortaa';
+    text-align: center;
+
+}
+
+.nombre {
+    font-family: 'Comfortaa';
+    text-align: center;
+
+}
+
+.pais {
+    font-family: 'Comfortaa';
+    text-align: center;
+
+}
+
+.botones {
+    font-family: 'Comfortaa';
+    text-align: center;
+
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    font-family: 'Cinzel';
+    text-align: center;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+
+}
+
+/*fin Grids Contacto mobile*/
+
+
+/*Comienzo Grids Coleccion mobile */
+
+
+
+
+.grillaColeccion {
+    background-image: url(../imgs/vinos.jpeg);
+    display: grid;
+    grid-template-areas: 
+    "menuLinks menuLinks menuLinks"
+    ". contenido ."
+    ". contenido ."
+    ". contenido ."
+    ". contenido ."
+    ". contenido ."
+    ". . ."
+    "cuadro cuadro cuadro"
+
+
+    
+    ;
+    grid-template-rows: 10% repeat(5, 30%);
+    grid-template-columns: 15% 70% 15%;
+    height: 100vh;
+}
+
+
+.menuLinksIzq {
+    text-align: center;
+}
+
+.cuadroIzq {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+
+}
+
+.linksIzq {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 20px;
+}
+
+
+.imgIzquierdaColeccion {
+    grid-area: menuLinks;
+    font-family: 'Comfortaa';
+}
+
+
+.tituloMobile {
+    display: none;
+    font-family: 'Cinzel';
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+    align-self: center;
+}
+
+
+.tituloCol {
+    font-family: 'Cinzel';
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    align-self: center;
+}
+
+.subtituloCol {
+    color: white;
+    text-align: center;
+    font-family: 'Comfortaa';
+
+}
+
+.contDerechaColeccion {
+    grid-area: contenido;
+    color: white;
+}
+
+.coleccionUno {
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Comfortaa';
+}
+
+.coleccionDos {
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Comfortaa';
+
+}
+
+.coleccionTres {
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Comfortaa';
+
+
+}
+
+.coleccionCuatro {
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Comfortaa';
+
+
+}
+
+
+.cuadroTablet {
+    grid-area: cuadro;
+    font-family: 'Cinzel';
+    text-align: center;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    height: 150px;
+    
+
+}
+
+.margenImgCol {
+    width: 100%;
+    height: 30%;
+    border-radius: 25px;
+    border: solid;
+    border-color: white;
+}
+
+/*Final Grids Coleccion mobile*/
+
+
+/*Comienzo Grids degustaciones mobile*/
+
+
+
+.grillaDegustaciones {
+    background-image: url(../imgs/visitas.jpg);
+    display: grid;
+    grid-template-areas: 
+    "links links links"
+    "contenido contenido contenido"
+    "contenido contenido contenido"
+    "contenido contenido contenido"
+    ". . ."
+    "cuadro cuadro cuadro"
+
+    /*
+    ". . ."
+    ". contenido ."
+    ". contenido ."
+    ". contenido ."
+    ". . ."
+    ". cuadro ."
+    */
+    ;
+    grid-template-rows: 10% repeat(3, 20%) 20% 15%;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+.imgDerechaDegust {
+    grid-area: links;
+    text-align: center;
+}
+
+.menuLinksDer {
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroDer {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.contIzquierdaDegust {
+    grid-area: contenido;
+    background-color: white;
+    align-items: center;
+
+
+}
+
+.tituloDegust {
+    font-family: 'Cinzel';
+    font-size: 32px;
+    text-align: center;
+    margin: 10px;
+}
+
+.subtituloDegust {
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.subtituloDegustDos {
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.cuerpoDegust {
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.cuerpoDegustDos {
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.imgDegust { 
+    border-radius: 30px;
+    border-color: #4d292f;
+    border-style: solid;
+    width: 70%;
+    height: 35%;
+
+    /*
+    width: 30%;
+    height: 20%;
+    align-self: center;
+    */
+}
+
+
+/*fin grids Degustaciones mobile */
+
+/* Comienzo grids Viñedo mobile*/
+
+.grillaViñedo {
+    background-image: url(../imgs/fondovin2.jpg);
+    display: grid;
+    grid-template-areas: 
+    "links links links"
+    "contenido contenido contenido"
+    ". . ."
+    "cuadro cuadro cuadro"
+    
+    ;
+    grid-template-rows: 10% 100% 5% 10% ;
+    grid-template-columns: 20% 60% 20%;
+    height: 100vh;
+}
+
+.imgDerechaViñedo {
+    grid-area: links;
+}
+
+.menuLinksDer {
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroDer {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.contIzquierdaViñedo {
+    grid-area: contenido;
+    background-color: white;
+
+}
+
+.tituloViñedo {
+    grid-area: tituloV;
+    font-family: 'Cinzel';
+    font-size: 35px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.subtituloViñedo {
+    grid-area: subViñ;
+    font-family: 'Comfortaa';
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.subtituloViñedoDos {
+    grid-area: subViñDos;
+    font-family: 'Comfortaa';
+    font-size: 22px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.cuerpoViñedoIzq {
+    grid-area: cuerpoViñIzq;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: left;
+    margin: 10px;
+}
+
+.cuerpoViñedoIzqDos {
+    grid-area: cuerpoViñIzqDos;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: left;
+    margin: 10px;
+
+}
+
+.imgsViñedoDer {
+    grid-area: subImgDer;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+    width: 300px;
+    height: 150px;
+
+}
+
+
+.imgsViñedoDerDos {
+    grid-area: subImgDerDos;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+    width: 300px;
+    height: 150px;
+}
+
+
+/* fin grids Viñedo mobile*/
+
+
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+/* Inicio Grids Index tablet */ 
+
+
+.grilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "arriba"
+    "abajo"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% 80%;
+}
+
+
+
+.fondoVinedo{
+    grid-area: arriba;
+    background-image: url(../imgs/vinedouvas4.png);
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo links links links"
+    ". . . . . . . ."
+    ". subtitulo subtitulo subtitulo . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". coleccion coleccion coleccion coleccion coleccion coleccion ."
+    ;
+    grid-template-columns: 15% 10% 10% 15% repeat(4, 1fr);
+    grid-template-rows: 10% 10% 5% 40% 30%;
+
+}
+
+
+
+#tituloIndex {
+    grid-area: titulo;
+    color: white;
+    font-size: 70px;
+    font-family:'Cinzel', serif;;
+    text-shadow: #181818 1px 0 10px;
+
+
+}
+
+.tituloPags {
+    font-size: 60px;
+    font-family:'Cinzel', serif;;
+
+}
+
+.fuenteCursiva {
+    font-family: 'Comfortaa';
+    color: white;
+
+}
+
+#vvSubtitulo {
+    grid-area: subtitulo;
+    font-size: 20px;
+
+}
+
+
+ul {
+    li {
+    display: inline;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    }
+}
+
+.menuLinks {
+    grid-area: links;
+    margin-top: 30px;
+}
+
+.linksUno {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.fondoSierra {
+    grid-area: abajo;
+    display: grid;
+    grid-template-areas: 
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . cuadroPie . "
+    "pie pie pie pie pie pie cuadroPie rellenoPie "
+    ;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr) 20% 5% 15%;
+
+}
+
+
+.menuLinksPie {
+    width: max-content;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.linksDos {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.linksTres{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.pie {
+    grid-area: pie;
+    color: white;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+.rellenoPie {
+    grid-area: rellenoPie;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+
+#cuadroPie {
+    grid-area: cuadroPie;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+    background-color: #4d292f;
+    border: black 3px solid;
+
+}
+
+input, select {
+    font-family: Cinzel;
+    font-size: 20px;
+    background-color: #4d292f;
+    color: white;
+}
+
+
+.coleccionIndex {
+    grid-area: coleccion;
+    display: grid;
+    grid-template-areas: 
+    ". tCol tCol"
+    "imgCol textCol textCol"
+    ". btnCol btnCol"
+    ;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 10% 70% 30%;
+    background-color: white;
+    border: solid rgb(204, 204, 204) 5px;
+}
+
+#imgColeccion {
+    grid-area: imgCol;
+    border-radius: 25px;
+    border-color: rgb(218, 218, 218);
+    border-style: solid;
+    width: 100%;
+    height: 20vh;
+    margin-left: 15px;
+}
+
+#tituloColeccion {
+    text-align: center;
+    grid-area: tCol;
+    font-family: 'Cinzel';
+    font-size: 48px;
+}
+
+#cuerpoColeccion {
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: textCol;
+    font-size: 20px;
+    font-family: 'Comfortaa';
+    text-justify: distribute;
+}
+
+.botonIndex {
+    grid-area: btnCol;
+    font-size: 25px;
+    font-family: 'Comfortaa';
+    width: max-content;
+    height: max-content;
+    transition: all 1s;
+    justify-self: center;
+}
+
+.botonIndex:hover {
+    font-size: 24px;
+    height: 100px;
+}
+
+.cosechaIndex {
+    display: none;
+    grid-area: cosecha;
+    display: grid;
+    grid-template-areas: 
+    "nombreCos imgCos sobreCos"
+    ". imgCos textCos"
+    "añoCos imgCos btnCos"
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+#nombreCosecha {
+    display: none;
+    grid-area: nombreCos;
+    font-family: 'Cinzel';
+    font-size: 35px;
+    align-self: center;
+    text-align: center;
+}
+
+#añoCosecha {
+    display: none;
+    grid-area: añoCos;
+    font-family: 'Cinzel';
+    font-size: 45px;
+    text-align: center;
+
+}
+
+#imgCosecha {
+    display: none;
+    grid-area: imgCos;
+    align-self: center;
+    justify-self: center;
+}
+
+#sobreCosecha {
+    display: none;
+    grid-area: sobreCos;
+    font-family: 'Cinzel';
+    align-self: center;
+    text-align: center;
+    font-size: 32px;
+
+}
+
+#infoCosecha {
+    display: none;
+    grid-area: textCos;
+    font-size: 24px;
+    font-family: 'Comfortaa';
+    text-align: center;
+
+
+}
+
+#botonCosecha {
+    display: none;
+    grid-area: btnCos;
+    font-family: 'Comfortaa';
+    transition: all 1s;
+    font-size: 24px;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    justify-self: center;
+
+}
+
+#botonCosecha:hover {
+    font-size: 27px;
+}
+
+/* Fin Grids Index tablet */ 
+
+
+
+/*comienzo grids Contacto tablet */
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+    
+    .distanciaMenu {
+        padding: 30px;
+    }
+    
+    .redesFinal {
+        background-color: #4d292f;
+        border: solid 3px black;
+        color: white;
+        font-family: 'Cinzel';
+        font-size: 20px;
+        text-align: center;
+        margin-top: 76.5%;
+        margin-left: 30%;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .flexContenido {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 1400px;
+    }
+    
+    .cuerpoDegust {
+        font-size: 20px;
+        font-family: 'Comfortaa';
+        text-align: center;
+    }
+    
+    .imgDegust {
+        margin-top: 75px;
+        border-radius: 25px;
+        border: #4d292f solid 3px;
+    }
+    
+    .grillaContacto {
+        display: grid;
+        grid-template-areas: 
+        "imagen contenido"
+        "cuadro cuadro";
+        grid-template-rows: 87% 13%;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+    
+    .imgIzquierdaContacto {
+        grid-area: imagen;
+        background-image: url(../imgs/leaves.jpg);
+        display: grid;
+        grid-template-areas:
+        "links links links"
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr 100% 1fr;
+    }
+    .cuadroIzq {
+        display: none;
+    }
+
+
+    .cuadroTablet {
+        grid-area: cuadro;
+        background-color: #4d292f;
+        border: solid 3px black;
+        color: white;
+        font-family: 'Cinzel';
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .menuLinksIzq {
+        grid-area: links;
+        text-align: center;
+    }
+    
+    .linksIzq {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        margin: 3%;
+    }
+    
+    
+    
+    .contDerechaContacto {
+        display: grid;
+        grid-area: contenido;
+        grid-template-areas:
+        ". . ." 
+        "titulo titulo titulo"
+        ". . ."
+        ". contacto ."
+        ". contacto ."
+        ". contacto ."
+        ". contacto ."
+        ". . ."
+        ". . ."
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10px 70px 90px 50px repeat(4, 1fr) 10px;
+        align-items: center;
+    }
+    
+    .contacto {
+        grid-area: contacto;
+        font-family: 'Comfortaa';
+    }
+    
+    .titulo {
+        grid-area: titulo;
+        font-family: 'Cinzel';
+        font-size: 48px;
+        text-align: center;
+        margin-top: 50px;
+     
+    }
+    
+    .duda {
+        grid-area: duda;
+        text-align: center;
+        font-family: 'Comfortaa';
+        margin: 60px;
+    
+    }
+    
+    .email {
+        grid-area: mail;
+        font-family: 'Comfortaa';
+        text-align: center;
+        margin: 60px;
+    
+    }
+    
+    .nombre {
+        grid-area: nombre;
+        font-family: 'Comfortaa';
+        text-align: center;
+        margin: 60px;
+    
+    }
+    
+    .pais {
+        grid-area: pais;
+        font-family: 'Comfortaa';
+        text-align: center;
+        margin: 60px;
+    
+    }
+    
+    .botones {
+        grid-area: botones;
+        font-family: 'Comfortaa';
+        text-align: center;
+        margin: 60px;
+    
+    }
+
+    .tituloMobile {
+        display: none;
+    }
+
+.fondoBlanco {
+    display: none;
+}
+
+.fondoTitulo {
+    display: none;
+}
+
+    
+/*final grids Contacto tablet */    
+
+/*comienzo grids Coleccion tablet */
+
+
+.grillaColeccion {
+    display: grid;
+    grid-template-areas: 
+    "imagen contenido"
+    "cuadro cuadro";
+    grid-template-rows: 87% 13%;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgIzquierdaColeccion {
+    grid-area: imagen;
+    background-image: url(../imgs/vinos.jpeg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.cuadroIzq {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.menuLinksIzq {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksIzq {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.contDerechaColeccion {
+    display: grid;
+    grid-area: contenido;
+    grid-template-areas: 
+    ". . . . ."
+    "tituloCol tituloCol tituloCol tituloCol tituloCol"
+    ". subCol subCol subCol ."
+    ". . . . ."
+    ". colUno colUno colUno ."
+    ". . . . ."
+    ". colTres colTres colTres ."
+    ". . . . .";
+    grid-template-rows: 2% 10% 5% 5% 33% 5% 32% 8%;
+    grid-template-columns: 5% 35% 20% 35% 5%;
+    align-items: center;
+}
+
+.subtituloCol {
+    grid-area: subCol;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.coleccionUno {
+    grid-area: colUno;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionDos {
+    display: none;
+    grid-area: colDos;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionTres {
+    grid-area: colTres;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionCuatro {
+    display: none;
+    grid-area: colCuatro;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.tituloCol {
+    grid-area: tituloCol;
+    font-family: 'Cinzel';
+    font-size: 48px;
+    text-align: center;
+ 
+}
+
+.margenImgCol {
+    margin-top: 10px;
+}
+
+
+
+/*final grids Coleccion tablet */
+
+
+
+/*Comienzo Grids degustaciones tablet*/
+
+.grillaDegustaciones {
+    display: grid;
+    grid-template-areas: 
+    "contenido imagen"
+    "cuadro cuadro";
+    grid-template-rows: 87% 13%;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgDerechaDegust {
+    grid-area: imagen;
+    background-image: url(../imgs/variosvinos2.jpg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". cuadro .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.menuLinksDer {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroDer {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.contIzquierdaDegust {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "tituloDegust tituloDegust tituloDegust"
+    ". . ."
+    ". subtituloDegust ."
+    "cuerpoDegust cuerpoDegust cuerpoDegust"
+    ". . ."
+    ". subtituloDegustDos ."
+    "cuerpoDegustDos cuerpoDegustDos cuerpoDegustDos"
+    ". imgDegust ."
+    ". imgDegust ."
+
+    ;
+    grid-template-rows: 2% 8% 10% 7% 10% 3% 7% 10% 17% 29%;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.tituloDegust {
+    grid-area: tituloDegust;
+    font-family: 'Cinzel';
+    font-size: 42px;
+    text-align: center;
+ 
+}
+
+.subtituloDegust {
+    grid-area: subtituloDegust;
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    text-align: center;
+}
+
+.subtituloDegustDos {
+    grid-area: subtituloDegustDos;
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    text-align: center;
+}
+
+.cuerpoDegust {
+    grid-area: cuerpoDegust;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.cuerpoDegustDos {
+    grid-area: cuerpoDegustDos;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.imgDegust {
+    grid-area: imgDegust;
+    transition: all 0.5s;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #4d292f;
+    width: 350px;
+    height: 210px;
+}
+
+.imgDegust:hover {
+    width: 420px;
+    height: 250px;
+}
+
+/*fin grids Degustaciones tablet */
+
+
+/* Comienzo grids Viñedo tablet*/
+
+.grillaViñedo {
+    display: grid;
+    grid-template-areas: 
+    "contenido imagen"
+    "cuadro cuadro";
+    grid-template-rows: 87% 13%;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgDerechaViñedo {
+    grid-area: imagen;
+    background-image: url(../imgs/fondovin2.jpg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.menuLinksDer {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroTablet {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroDer {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.contIzquierdaViñedo {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "tituloV tituloV tituloV"
+    ". . ."
+    "subViñ subViñ ."
+    "cuerpoViñIzq cuerpoViñIzq cuerpoViñIzq"
+    "subImgDer subImgDer ."
+    "subViñDos subViñDos ."
+    "cuerpoViñIzqDos cuerpoViñIzqDos cuerpoViñIzqDos"
+    "subImgDerDos subImgDerDos ."
+
+    ;
+
+    grid-template-rows: 1% 10% 5% 5% 13% 22% 8% 13% 23%;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.tituloViñedo {
+    grid-area: tituloV;
+    font-family: 'Cinzel';
+    font-size: 42px;
+    text-align: center;
+
+}
+
+.subtituloViñedo {
+    grid-area: subViñ;
+    font-family: 'Comfortaa';
+    font-size: 24px;
+    text-align: center;
+}
+
+.subtituloViñedoDos {
+    grid-area: subViñDos;
+    font-family: 'Comfortaa';
+    font-size: 22px;
+    text-align: center;
+}
+
+.cuerpoViñedoIzq {
+    grid-area: cuerpoViñIzq;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: left;
+}
+
+.cuerpoViñedoIzqDos {
+    grid-area: cuerpoViñIzqDos;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    text-align: left;
+}
+
+.imgsViñedoDer {
+    grid-area: subImgDer;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+    width: 300px;
+    height: 150px;
+
+}
+
+.imgsViñedoDer:hover {
+    width: 350px;
+    height: 170px;
+
+}
+
+.imgsViñedoDerDos {
+    grid-area: subImgDerDos;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+    width: 300px;
+    height: 150px;
+}
+
+.imgsViñedoDerDos:hover {
+    width: 350px;
+    height: 170px;
+
+}
+
+/* fin grids Viñedo tablet*/
+
+
+
+}
+
+@media (min-width: 1024px){
+
+/* Inicio Grids Index Desktop */ 
+
+
+.grilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "arriba"
+    "abajo"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% 120%;
+}
+
+
+
+.fondoVinedo{
+    grid-area: arriba;
+    background-image: url(../imgs/vinedouvas4.png);
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo links links links"
+    ". subtitulo subtitulo . . . . ."
+    ". . . . . . . ."
+    ". . coleccion coleccion coleccion coleccion . ."
+    ;
+    grid-template-columns: 15% 10% 10% 15% repeat(4, 1fr);
+    grid-template-rows: 10% 5% 60% 1fr;
+
+}
+
+
+
+#tituloIndex {
+    grid-area: titulo;
+    color: white;
+    font-size: 70px;
+    font-family:'Cinzel', serif;;
+    text-shadow: #181818 1px 0 10px;
+
+
+}
+
+.tituloPags {
+    font-size: 60px;
+    font-family:'Cinzel', serif;;
+
+}
+
+.fuenteCursiva {
+    font-family: 'Comfortaa';
+    color: white;
+
+}
+
+#vvSubtitulo {
+    grid-area: subtitulo;
+    font-size: 20px;
+
+}
+
+.tituloSecciones {
+    font-size: 27px;
+}
+
+.tipoCuerpo {
+    font-size: 15px;
+    font-family: 'Comfortaa';
+}
+
+.fuenteBlanca {
+    color: white;
+}
+
+ul {
+    li {
+    display: inline;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    margin: 20px;
+    }
+}
+
+.menuLinks {
+    grid-area: links;
+    margin-top: 30px;
+}
+
+.linksUno {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.fondoSierra {
+    grid-area: abajo;
+    display: grid;
+    grid-template-areas: 
+    ". . . . . . . . "
+    ". . . . . . . . "
+    ". cosecha cosecha cosecha cosecha cosecha cosecha . "
+    ". . . . . . . . "
+    ". . . . . . cuadroPie . "
+    "pie pie pie pie pie pie cuadroPie rellenoPie "
+    ;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 25% 7% 1fr 10% 5% 10%;
+
+}
+
+
+.menuLinksPie {
+    width: max-content;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.linksDos {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.linksTres{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.pie {
+    grid-area: pie;
+    color: white;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+.rellenoPie {
+    grid-area: rellenoPie;
+    border: solid 3px black;
+    background-color: #4d292f;
+}
+
+
+#cuadroPie {
+    grid-area: cuadroPie;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+    background-color: #4d292f;
+    border: black 3px solid;
+
+}
+
+input, select {
+    font-family: Cinzel;
+    font-size: 20px;
+    background-color: #4d292f;
+    color: white;
+}
+
+
+.coleccionIndex {
+    grid-area: coleccion;
+    display: grid;
+    grid-template-areas: 
+    ". tCol tCol"
+    "imgCol textCol textCol"
+    ". btnCol btnCol"
+    ;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 10% 70% 30%;
+    background-color: white;
+    border: solid rgb(204, 204, 204) 5px;
+}
+
+#imgColeccion {
+    grid-area: imgCol;
+    border-radius: 25px;
+    border-color: rgb(218, 218, 218);
+    border-style: solid;
+    width: 100%;
+    height: 40vh;
+    margin-left: 15px;
+}
+
+#tituloColeccion {
+    text-align: center;
+    grid-area: tCol;
+    font-family: 'Cinzel';
+    font-size: 48px;
+}
+
+#cuerpoColeccion {
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: textCol;
+    font-size: 27px;
+    font-family: 'Comfortaa';
+    text-justify: distribute;
+}
+
+.botonIndex {
+    grid-area: btnCol;
+    font-size: 25px;
+    font-family: 'Comfortaa';
+    width: max-content;
+    height: max-content;
+    transition: all 1s;
+    justify-self: center;
+}
+
+.botonIndex:hover {
+    font-size: 27px;
+    height: 100px;
+}
+
+.cosechaIndex {
+    grid-area: cosecha;
+    display: grid;
+    grid-template-areas: 
+    "nombreCos imgCos sobreCos"
+    ". imgCos textCos"
+    "añoCos imgCos btnCos"
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+#nombreCosecha {
+    grid-area: nombreCos;
+    font-family: 'Cinzel';
+    font-size: 35px;
+    align-self: center;
+    text-align: center;
+}
+
+#añoCosecha {
+    grid-area: añoCos;
+    font-family: 'Cinzel';
+    font-size: 45px;
+    text-align: center;
+
+}
+
+#imgCosecha {
+    grid-area: imgCos;
+    align-self: center;
+    justify-self: center;
+}
+
+#sobreCosecha {
+    grid-area: sobreCos;
+    font-family: 'Cinzel';
+    align-self: center;
+    text-align: center;
+    font-size: 32px;
+
+}
+
+#infoCosecha {
+    grid-area: textCos;
+    font-size: 24px;
+    font-family: 'Comfortaa';
+    text-align: center;
+
+
+}
+
+#botonCosecha {
+    grid-area: btnCos;
+    font-family: 'Comfortaa';
+    transition: all 1s;
+    font-size: 24px;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    justify-self: center;
+
+}
+
+#botonCosecha:hover {
+    font-size: 27px;
+}
+
+/* Fin Grids Index Desktop */ 
+
+
+
+
+/*comienzo Grids Contacto desktop*/
+
+nav ul {
+    justify-content: space-evenly;
+}
+
+.distanciaMenu {
+    padding: 30px;
+}
+
+.redesFinal {
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 76.5%;
+    margin-left: 30%;
+    width: 400px;
+    height: 200px;
+}
+
+.flexContenido {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1400px;
+}
+
+
+.grillaContacto {
+    display: grid;
+    grid-template-areas: 
+    "imagen contenido";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgIzquierdaContacto {
+    grid-area: imagen;
+    background-image: url(../imgs/leaves.jpg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". cuadro .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.cuadroIzq {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.menuLinksIzq {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksIzq {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+
+
+.contDerechaContacto {
+    display: grid;
+    grid-area: contenido;
+    grid-template-areas:
+    ". . ." 
+    "titulo titulo titulo"
+    ". contacto ."
+    ". contacto ."
+    ". contacto ."
+    ". contacto ."
+    ". . ."
+    ". . ."
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10px 70px 50px repeat(4, 1fr) 10px;
+    align-items: center;
+}
+
+.contacto {
+    grid-area: contacto;
+    font-family: 'Comfortaa';
+}
+
+.titulo {
+    grid-area: titulo;
+    font-family: 'Cinzel';
+    font-size: 48px;
+    text-align: center;
+ 
+}
+
+.duda {
+    grid-area: duda;
+    text-align: center;
+    font-family: 'Comfortaa';
+    margin: 60px;
+
+}
+
+.email {
+    grid-area: mail;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 60px;
+
+}
+
+.nombre {
+    grid-area: nombre;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 60px;
+
+}
+
+.pais {
+    grid-area: pais;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 60px;
+
+}
+
+.botones {
+    grid-area: botones;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 60px;
+
+}
+
+.botonEnviarCont {
+    margin: 20px;
+    transition: all 1s;
+}
+
+.botonEnviarCont:hover {
+    font-size: 23px;
+}
+
+.botonLimpiarCont {
+    margin: 20px;
+    transition: all 1s;
+}
+
+.botonLimpiarCont:hover {
+    font-size: 23px;
+}
+
+.cuadroTablet {
+    display: none;
+}
+
+.tituloMobile {
+    display: none;
+}
+
+.fondoBlanco {
+    display: none;
+}
+
+.fondoTitulo {
+    display: none;
+}
+
+
+/*final Grids Contacto desktop*/
+
+
+/*Comienzo Grids Coleccion desktop */
+
+.grillaColeccion {
+    display: grid;
+    grid-template-areas: 
+    "imagen contenido";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgIzquierdaColeccion {
+    grid-area: imagen;
+    background-image: url(../imgs/vinos.jpeg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". cuadro .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+
+.cuadroIzq {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroTablet {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.menuLinksIzq {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksIzq {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.contDerechaColeccion {
+    display: grid;
+    grid-area: contenido;
+    grid-template-areas: 
+    ". . . . ."
+    "tituloCol tituloCol tituloCol tituloCol tituloCol"
+    ". subCol subCol subCol ."
+    ". . . . ."
+    ". colUno . colDos ."
+    ". . . . ."
+    ". colTres . colCuatro ."
+    ". . . . .";
+    grid-template-rows: 2% 10% 5% 5% 33% 5% 32% 8%;
+    grid-template-columns: 5% 35% 20% 35% 5%;
+    align-items: center;
+}
+
+.subtituloCol {
+    grid-area: subCol;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.coleccionUno {
+    grid-area: colUno;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionDos {
+    grid-area: colDos;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionTres {
+    grid-area: colTres;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.coleccionCuatro {
+    grid-area: colCuatro;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.tituloCol {
+    grid-area: tituloCol;
+    font-family: 'Cinzel';
+    font-size: 48px;
+    text-align: center;
+ 
+}
+
+.margenImgCol {
+    margin-top: 10px;
+}
+
+
+/*Final Grids Coleccion desktop*/
+
+
+/*Comienzo Grids degustaciones desktop*/
+
+.grillaDegustaciones {
+    display: grid;
+    grid-template-areas: 
+    "contenido imagen";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgDerechaDegust {
+    grid-area: imagen;
+    background-image: url(../imgs/variosvinos2.jpg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". cuadro .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.menuLinksDer {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroDer {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.contIzquierdaDegust {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "tituloDegust tituloDegust tituloDegust"
+    ". . ."
+    ". subtituloDegust ."
+    "cuerpoDegust cuerpoDegust cuerpoDegust"
+    ". . ."
+    ". subtituloDegustDos ."
+    "cuerpoDegustDos cuerpoDegustDos cuerpoDegustDos"
+    ". . ."
+    ". imgDegust ."
+    ". imgDegust ."
+
+    ;
+    grid-template-rows: 2% 8% 1% 7% 10% 3% 7% 10% 2% 17% 29%;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.tituloDegust {
+    grid-area: tituloDegust;
+    font-family: 'Cinzel';
+    font-size: 48px;
+    text-align: center;
+ 
+}
+
+.subtituloDegust {
+    grid-area: subtituloDegust;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.subtituloDegustDos {
+    grid-area: subtituloDegustDos;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.cuerpoDegust {
+    grid-area: cuerpoDegust;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.cuerpoDegustDos {
+    grid-area: cuerpoDegustDos;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.imgDegust {
+    grid-area: imgDegust;
+    transition: all 0.5s;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #4d292f;
+    width: 700px;
+    height: 420px;
+}
+
+.imgDegust:hover {
+    width: 750px;
+    height: 450px;
+}
+
+/*fin grids Degustaciones desktop */
+
+
+/* Comienzo grids Viñedo desktop*/
+
+.grillaViñedo {
+    display: grid;
+    grid-template-areas: 
+    "contenido imagen";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.imgDerechaViñedo {
+    grid-area: imagen;
+    background-image: url(../imgs/fondovin2.jpg);
+    display: grid;
+    grid-template-areas:
+    "links links links"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". cuadro .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+.menuLinksDer {
+    grid-area: links;
+    text-align: center;
+}
+
+.linksDer {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 3%;
+}
+
+.cuadroDer {
+    grid-area: cuadro;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cuadroTablet {
+    display: none;
+    background-color: #4d292f;
+    border: solid 3px black;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 20px;
+    text-align: center;
+}
+
+.contIzquierdaViñedo {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "tituloV tituloV tituloV"
+    ". . ."
+    "subViñ subViñ subImgDer"
+    "cuerpoViñIzq cuerpoViñIzq subImgDer"
+    ". . ."
+    "subViñDos subViñDos subImgDerDos"
+    "cuerpoViñIzqDos cuerpoViñIzqDos subImgDerDos"
+    ". . ."
+
+    ;
+
+    grid-template-rows: 2% 10% 5% 10% 27% 5% 10% 26% 5%;
+    grid-template-columns: 35% 30% 35%;
+}
+
+.tituloViñedo {
+    grid-area: tituloV;
+    font-family: 'Cinzel';
+    font-size: 48px;
+    text-align: center;
+
+}
+
+.subtituloViñedo {
+    grid-area: subViñ;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.subtituloViñedoDos {
+    grid-area: subViñDos;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    text-align: center;
+}
+
+.cuerpoViñedoIzq {
+    grid-area: cuerpoViñIzq;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    text-align: left;
+}
+
+.cuerpoViñedoIzqDos {
+    grid-area: cuerpoViñIzqDos;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    text-align: left;
+}
+
+.imgsViñedoDer {
+    grid-area: subImgDer;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+}
+
+.imgsViñedoDer:hover {
+    width: 420px;
+    height: 320px;
+
+}
+
+.imgsViñedoDerDos {
+    grid-area: subImgDerDos;
+    border-radius: 25px;
+    border: solid #4d292f 3px;
+    transition: all 0.5s;
+}
+
+.imgsViñedoDerDos:hover {
+    width: 420px;
+    height: 320px;
+
+}
+
+/* fin grids Viñedo desktop*/
+
+
+
+
+
+}
+
