@@ -40,7 +40,7 @@ h1,h2,h3,h4,article, form, nav {
     "coleccion coleccion coleccion coleccion coleccion coleccion coleccion coleccion"
     ;
     grid-template-columns: 15% 10% 10% 15% repeat(4, 1fr);
-    grid-template-rows: 5% 5% 10% 30%;
+    grid-template-rows: 5% 5% 10% 40%;
 
 }
 
@@ -49,7 +49,7 @@ h1,h2,h3,h4,article, form, nav {
 #tituloIndex {
     grid-area: titulo;
     color: white;
-    font-size: 28px;
+    font-size: 25px;
     font-family:'Cinzel', serif;;
     text-shadow: #181818 1px 0 10px;
 
@@ -79,6 +79,7 @@ h1,h2,h3,h4,article, form, nav {
     display: flex;
     font-family: 'Cinzel';
     font-size: 23px;
+    margin-top: 5px;
 }
 
 ul {
@@ -118,12 +119,12 @@ ul {
 
 .menuLinksPie {
     width: max-content;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-left: 7px;
 }
 
 .linksDos {
-    font-size: 18px;
+    font-size: 16.5px;
     color: white;
     text-decoration: none;
 }
@@ -173,7 +174,7 @@ input, select {
     grid-template-areas: 
     ". tCol tCol"
     "imgCol textCol textCol"
-    ". btnCol btnCol"
+    "imgCol btnCol btnCol"
     ;
     grid-template-columns: 40% 1fr 1fr;
     grid-template-rows: 10% 70% 30%;
@@ -188,7 +189,7 @@ input, select {
     border-style: solid;
     width: 100%;
     height: 20vh;
-    margin-left: 15px;
+    margin-left: 7px;
 }
 
 #tituloColeccion {
@@ -320,7 +321,7 @@ body {
     ". cuadro ."
     ". cuadro .";
     grid-template-columns: 1fr 60% 1fr;
-    grid-template-rows: 10% 5% 12% 25% 25% 3% 10% 10%;
+    grid-template-rows: 15% 5% 12% 25% 25% 3% 10% 10%;
 
 }
 
@@ -340,6 +341,10 @@ body {
     color: white;
     text-decoration: none;
     font-size: 22px;
+    margin: 30px;
+}
+
+#margenLinksCont {
     margin: 20px;
 }
 
@@ -576,16 +581,8 @@ body {
     ". . ."
     "cuadro cuadro cuadro"
 
-    /*
-    ". . ."
-    ". contenido ."
-    ". contenido ."
-    ". contenido ."
-    ". . ."
-    ". cuadro ."
-    */
     ;
-    grid-template-rows: 10% repeat(3, 20%) 20% 15%;
+    grid-template-rows: 10% repeat(3, 21%) 25% 15%;
     grid-template-columns: repeat(3, 1fr);
     height: 100vh;
 }
@@ -631,6 +628,7 @@ body {
     grid-area: contenido;
     background-color: white;
     align-items: center;
+    
 
 
 }
@@ -680,12 +678,8 @@ body {
     border-style: solid;
     width: 70%;
     height: 35%;
+    margin-left: 50px;
 
-    /*
-    width: 30%;
-    height: 20%;
-    align-self: center;
-    */
 }
 
 
@@ -699,11 +693,12 @@ body {
     grid-template-areas: 
     "links links links"
     "contenido contenido contenido"
+    "contenido contenido contenido"
     ". . ."
     "cuadro cuadro cuadro"
     
     ;
-    grid-template-rows: 10% 100% 5% 10% ;
+    grid-template-rows: 18% 100% 17% 10% 20% ;
     grid-template-columns: 20% 60% 20%;
     height: 100vh;
 }
@@ -800,6 +795,7 @@ body {
     transition: all 0.5s;
     width: 300px;
     height: 150px;
+    margin-left: 25px;
 
 }
 
@@ -811,6 +807,8 @@ body {
     transition: all 0.5s;
     width: 300px;
     height: 150px;
+    margin-left: 25px;
+
 }
 
 
@@ -932,6 +930,7 @@ ul {
     font-size: 25px;
     color: white;
     text-decoration: none;
+    margin: 20px;
 }
 
 .linksTres{
@@ -941,6 +940,7 @@ ul {
 }
 
 .pie {
+    display: flex;
     grid-area: pie;
     color: white;
     border: solid 3px black;
@@ -1362,7 +1362,7 @@ input, select {
     ". . . . ."
     ". colTres colTres colTres ."
     ". . . . .";
-    grid-template-rows: 2% 10% 5% 5% 33% 5% 32% 8%;
+    grid-template-rows: 2% 15% 5% 5% 33% 5% 32% 8%;
     grid-template-columns: 5% 35% 20% 35% 5%;
     align-items: center;
 }
@@ -1650,7 +1650,7 @@ input, select {
 .subtituloViñedoDos {
     grid-area: subViñDos;
     font-family: 'Comfortaa';
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -1675,11 +1675,11 @@ input, select {
     transition: all 0.5s;
     width: 300px;
     height: 150px;
-
+    margin-left: 40px;
 }
 
 .imgsViñedoDer:hover {
-    width: 350px;
+    width: 330px;
     height: 170px;
 
 }
@@ -1691,12 +1691,12 @@ input, select {
     transition: all 0.5s;
     width: 300px;
     height: 150px;
+    margin-left: 40px;
 }
 
 .imgsViñedoDerDos:hover {
-    width: 350px;
+    width: 330px;
     height: 170px;
-
 }
 
 /* fin grids Viñedo tablet*/
@@ -1782,12 +1782,15 @@ input, select {
     color: white;
 }
 
+.margenLinksIndex {
+    margin: 20px;
+}
+
 ul {
     li {
     display: inline;
     font-family: 'Cinzel';
     font-size: 20px;
-    margin: 20px;
     }
 }
 
@@ -1937,6 +1940,7 @@ input, select {
     ;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border: solid #4d292f 5px;
 
 }
 
@@ -1994,6 +1998,10 @@ input, select {
 
 #botonCosecha:hover {
     font-size: 27px;
+}
+
+.linksMobileIndex {
+    margin: 20px;
 }
 
 /* Fin Grids Index Desktop */ 
@@ -2073,8 +2081,7 @@ nav ul {
 .linksIzq {
     color: white;
     text-decoration: none;
-    font-size: 25px;
-    margin: 3%;
+    font-size: 23px;
 }
 
 
@@ -2553,12 +2560,14 @@ nav ul {
     grid-area: subImgDer;
     border-radius: 25px;
     border: solid #4d292f 3px;
+    width: 90%;
+    height: 70%;
     transition: all 0.5s;
 }
 
 .imgsViñedoDer:hover {
-    width: 420px;
-    height: 320px;
+    width: 100%;
+    height: 80%;
 
 }
 
@@ -2566,13 +2575,14 @@ nav ul {
     grid-area: subImgDerDos;
     border-radius: 25px;
     border: solid #4d292f 3px;
+    width: 90%;
+    height: 70%;
     transition: all 0.5s;
 }
 
 .imgsViñedoDerDos:hover {
-    width: 420px;
-    height: 320px;
-
+    width: 100%;
+    height: 80%;
 }
 
 /* fin grids Viñedo desktop*/
