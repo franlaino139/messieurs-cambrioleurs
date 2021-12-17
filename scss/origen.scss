@@ -1819,6 +1819,7 @@ ul {
     ;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 25% 7% 1fr 10% 5% 10%;
+    background-image: linear-gradient(35deg, #4d292f 50%, white 50%);
 
 }
 
@@ -1941,6 +1942,7 @@ input, select {
     grid-template-rows: 10% 70% 30%;
     background-color: white;
     border: solid rgb(204, 204, 204) 5px;
+    z-index: 5;
 }
 
 #imgColeccion {
@@ -1996,7 +1998,7 @@ input, select {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     border: solid #4d292f 5px;
-
+    background-color: white;
 }
 
 #nombreCosecha {
@@ -2213,6 +2215,7 @@ nav ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10px 70px 50px repeat(4, 1fr) 10px;
     align-items: center;
+    background-image: linear-gradient(135deg, white 70%, #4d292f 30%);
 }
 
 .contacto {
@@ -2435,6 +2438,8 @@ nav ul {
     grid-template-rows: 2% 10% 5% 5% 33% 5% 32% 8%;
     grid-template-columns: 5% 35% 20% 35% 5%;
     align-items: center;
+    background-image: linear-gradient(135deg, white 60%, #4d292f 40%);
+
 }
 
 .subtituloCol {
@@ -2446,26 +2451,31 @@ nav ul {
 
 .coleccionUno {
     grid-area: colUno;
+    font-size: 25px;
     font-family: 'Comfortaa';
     text-align: center;
 }
 
 .coleccionDos {
     grid-area: colDos;
+    font-size: 25px;
     font-family: 'Comfortaa';
     text-align: center;
 }
 
 .coleccionTres {
     grid-area: colTres;
+    font-size: 25px;
     font-family: 'Comfortaa';
     text-align: center;
 }
 
 .coleccionCuatro {
     grid-area: colCuatro;
+    font-size: 25px;
     font-family: 'Comfortaa';
     text-align: center;
+    color: white;
 }
 
 .tituloCol {
@@ -2478,6 +2488,8 @@ nav ul {
 
 .margenImgCol {
     margin-top: 10px;
+    border-radius: 15px;
+    border: solid white 5px;
 }
 
 
@@ -2607,6 +2619,8 @@ nav ul {
     ;
     grid-template-rows: 2% 8% 1% 7% 10% 3% 7% 10% 2% 17% 29%;
     grid-template-columns: repeat(3, 1fr);
+    background-image: linear-gradient(30deg, #4d292f 50%, white 50%);
+
 
 }
 
@@ -2637,7 +2651,6 @@ nav ul {
     font-family: 'Comfortaa';
     font-size: 20px;
     text-align: center;
-
 }
 
 .cuerpoDegustDos {
@@ -2645,6 +2658,7 @@ nav ul {
     font-family: 'Comfortaa';
     font-size: 20px;
     text-align: center;
+    -webkit-text-stroke: 0.35px white;
 
 }
 
@@ -2792,11 +2806,10 @@ nav ul {
     "subViñDos subViñDos subImgDerDos"
     "cuerpoViñIzqDos cuerpoViñIzqDos subImgDerDos"
     ". . ."
-
     ;
-
     grid-template-rows: 2% 10% 5% 10% 27% 5% 10% 26% 5%;
     grid-template-columns: 35% 30% 35%;
+    background-image: linear-gradient(30deg, #4d292f 50%, white 50%);
 }
 
 .tituloViñedo {
@@ -2819,6 +2832,7 @@ nav ul {
     font-family: 'Comfortaa';
     font-size: 30px;
     text-align: center;
+    color: white;
 }
 
 .cuerpoViñedoIzq {
@@ -2826,6 +2840,8 @@ nav ul {
     font-family: 'Comfortaa';
     font-size: 20px;
     text-align: left;
+    -webkit-text-stroke: 0.35px white;
+
 }
 
 .cuerpoViñedoIzqDos {
@@ -2833,6 +2849,7 @@ nav ul {
     font-family: 'Comfortaa';
     font-size: 20px;
     text-align: left;
+    color: white;
 }
 
 .imgsViñedoDer {
