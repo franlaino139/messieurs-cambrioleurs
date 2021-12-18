@@ -59,7 +59,7 @@ h1, h2, h3, h4, article, form, nav {
     grid-area: abajo;
     display: grid;
     grid-template-areas: ". . . . . . . ." ". . . . . . cuadroPie . " "pie pie pie pie pie pie cuadroPie rellenoPie ";
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr) 30% 1fr;
     grid-template-rows: 30% 5% 65%; }
   .menuLinksPie {
     width: max-content;
@@ -83,13 +83,39 @@ h1, h2, h3, h4, article, form, nav {
     border: solid 3px black;
     background-color: #4d292f; }
   #cuadroPie {
+    display: grid;
+    grid-template-areas: ". titulo titulo titulo titulo titulo ."  ". . . . . . ." ". wpp . tw . ig ." ". . . . . . .";
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadroPie;
-    color: white;
-    font-family: 'Cinzel';
-    font-size: 20px;
-    text-align: center;
     background-color: #4d292f;
     border: black 3px solid; }
+  .mys {
+    grid-area: titulo;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 11px;
+    text-align: center;
+    justify-self: center;
+    margin-right: 5px; }
+  .wppIcon {
+    grid-area: wpp;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
+  .twIcon {
+    grid-area: tw;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
+  .igIcon {
+    grid-area: ig;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
   input, select {
     font-family: Cinzel;
     font-size: 20px;
@@ -243,19 +269,46 @@ h1, h2, h3, h4, article, form, nav {
     font-family: 'Comfortaa';
     text-align: center; }
   .cuadroTablet {
+    display: grid;
+    grid-template-areas: ". titulo titulo titulo titulo titulo ."  ". . . . . . ." ". wpp . tw . ig ." ". . . . . . .";
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
-    font-family: 'Cinzel';
-    text-align: center;
     background-color: #4d292f;
-    border: solid 3px black;
-    color: white; }
+    border: black 3px solid; }
+  .mys {
+    grid-area: titulo;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 17px;
+    text-align: center;
+    justify-self: center;
+    margin-right: 5px; }
+  .wppIconMobile {
+    grid-area: wpp;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
+  .twIconMobile {
+    grid-area: tw;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
+  .igIconMobile {
+    grid-area: ig;
+    height: 80%;
+    width: 70%;
+    align-self: center;
+    justify-self: center; }
   /*fin Grids Contacto mobile*/
   /*Comienzo Grids Coleccion mobile */
   .grillaColeccion {
     background-image: url(../imgs/vinos.jpeg);
     display: grid;
     grid-template-areas: "menuLinks menuLinks menuLinks" ". contenido ." ". contenido ." ". contenido ." ". contenido ." ". contenido ." ". . ." "cuadro cuadro cuadro";
-    grid-template-rows: 10% repeat(5, 30%);
+    grid-template-rows: 10% repeat(5, 30%) 1fr 20%;
     grid-template-columns: 15% 70% 15%;
     height: 100vh; }
   .menuLinksIzq {
@@ -314,13 +367,39 @@ h1, h2, h3, h4, article, form, nav {
     text-align: center;
     font-family: 'Comfortaa'; }
   .cuadroTablet {
+    display: grid;
+    grid-template-areas: ". titulo titulo titulo titulo titulo ."  ". . . . . . ." ". wpp . tw . ig ." ". . . . . . .";
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
-    font-family: 'Cinzel';
-    text-align: center;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid; }
+  .mys {
+    grid-area: titulo;
     color: white;
-    height: 150px; }
+    font-family: 'Cinzel';
+    font-size: 17px;
+    text-align: center;
+    justify-self: center;
+    margin-right: 5px; }
+  .wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
   .margenImgCol {
     width: 100%;
     height: 30%;
@@ -333,7 +412,7 @@ h1, h2, h3, h4, article, form, nav {
     background-image: url(../imgs/visitas.jpg);
     display: grid;
     grid-template-areas: "links links links" "contenido contenido contenido" "contenido contenido contenido" "contenido contenido contenido" ". . ." "cuadro cuadro cuadro";
-    grid-template-rows: 10% repeat(3, 21%) 25% 15%;
+    grid-template-rows: 10% repeat(3, 21%) 25% 25%;
     grid-template-columns: repeat(3, 1fr);
     height: 100vh; }
   .imgDerechaDegust {
@@ -347,13 +426,39 @@ h1, h2, h3, h4, article, form, nav {
     font-size: 25px;
     margin: 3%; }
   .cuadroTablet {
+    display: grid;
+    grid-template-areas: ". titulo titulo titulo titulo titulo ."  ". . . . . . ." ". wpp . tw . ig ." ". . . . . . .";
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid; }
+  .mys {
+    grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 20px;
-    text-align: center; }
+    font-size: 18px;
+    text-align: center;
+    justify-self: center;
+    margin-right: 5px; }
+  .wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
   .cuadroDer {
     display: none;
     background-color: #4d292f;
@@ -417,13 +522,39 @@ h1, h2, h3, h4, article, form, nav {
     font-size: 25px;
     margin: 3%; }
   .cuadroTablet {
+    display: grid;
+    grid-template-areas: ". titulo titulo titulo titulo titulo ."  ". . . . . . ." ". wpp . tw . ig ." ". . . . . . .";
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid; }
+  .mys {
+    grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 20px;
-    text-align: center; }
+    font-size: 18px;
+    text-align: center;
+    justify-self: center;
+    margin-right: 5px; }
+  .wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
+  .igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 55%;
+    align-self: center;
+    justify-self: center; }
   .cuadroDer {
     display: none;
     background-color: #4d292f;
