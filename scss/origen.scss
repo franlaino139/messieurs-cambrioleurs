@@ -166,7 +166,7 @@ ul {
 
 }
 
-.mys {
+.mysI {
     grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
@@ -470,11 +470,11 @@ body {
 
 }
 
-.mys {
+.mysC {
     grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 17px;
+    font-size: 12px;
     text-align: center;
     justify-self: center;
     margin-right: 5px;
@@ -1098,6 +1098,16 @@ ul {
     margin-top: 30px;
 }
 
+.margenLinksIndex {
+    margin-right: 20px;
+    align-self: center;
+}
+
+#alignC {
+    text-align: center;
+    text-justify: center;
+}
+
 .linksUno {
     color: white;
     text-decoration: none;
@@ -1117,6 +1127,8 @@ ul {
     ;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr) 20% 5% 15%;
+    background-image: linear-gradient(35deg, #4d292f 50%, white 50%);
+
 
 }
 
@@ -1156,15 +1168,56 @@ ul {
 
 
 #cuadroPie {
+    display: grid;
+    grid-template-areas:
+    ". titulo titulo titulo titulo titulo ." 
+    ". . . . . . ."
+    ". wpp . tw . ig ."
+    ". . . . . . ."
+    ;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadroPie;
-    color: white;
-    font-family: 'Cinzel';
-    font-size: 20px;
-    text-align: center;
     background-color: #4d292f;
     border: black 3px solid;
 
 }
+
+
+.mysI {
+    grid-area: titulo;
+    color: white;
+    font-family: 'Cinzel';
+    font-size: 12px;
+    text-align: center;
+    margin-left: -10px;
+}
+
+.wppIcon {
+    grid-area: wpp;
+    height: 60%;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.twIcon {
+    grid-area: tw;
+    height: 60%;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+}
+
+.igIcon {
+    grid-area: ig;
+    height: 60%;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+}
+
 
 input, select {
     font-family: Cinzel;
@@ -1186,6 +1239,7 @@ input, select {
     grid-template-rows: 10% 70% 30%;
     background-color: white;
     border: solid rgb(204, 204, 204) 5px;
+    z-index: 5;
 }
 
 #imgColeccion {
@@ -1221,14 +1275,9 @@ input, select {
     font-family: 'Comfortaa';
     width: max-content;
     height: max-content;
-    transition: all 1s;
     justify-self: center;
 }
 
-.botonIndex:hover {
-    font-size: 24px;
-    height: 100px;
-}
 
 .cosechaIndex {
     display: none;
@@ -1379,15 +1428,54 @@ input, select {
         display: none;
     }
 
-
     .cuadroTablet {
+        display: grid;
+        grid-template-areas:
+        ". titulo titulo titulo titulo titulo ." 
+        ". wpp . tw . ig ."
+        ". wpp . tw . ig ."
+        ". . . . . . ."
+        ;
+        grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+        grid-template-rows: 45% 10% 35% 10%;
         grid-area: cuadro;
+        text-align: center;
         background-color: #4d292f;
-        border: solid 3px black;
+        border: black 3px solid;
+    }
+
+    .mys {
+        grid-area: titulo;
         color: white;
         font-family: 'Cinzel';
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
+        margin-left: -10px;
+    }
+    
+    .wppIconMobile {
+        grid-area: wpp;
+        height: 100%;
+        width: 20%;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    
+    .twIconMobile {
+        grid-area: tw;
+        height: 100%;
+        width: 20%;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .igIconMobile {
+        grid-area: ig;
+        height: 100%;
+        width: 20%;
+        align-self: center;
+        justify-self: center;
     }
     
     .menuLinksIzq {
@@ -1421,6 +1509,8 @@ input, select {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 10px 70px 90px 50px repeat(4, 1fr) 10px;
         align-items: center;
+        background-image: linear-gradient(135deg, white 30%, white 30% 70%, #4d292f 70%);
+
     }
     
     .contacto {
@@ -1529,14 +1619,55 @@ input, select {
     text-align: center;
 }
 
+
 .cuadroTablet {
+    display: grid;
+    grid-template-areas:
+    ". titulo titulo titulo titulo titulo ." 
+    ". wpp . tw . ig ."
+    ". wpp . tw . ig ."
+    ". . . . . . ."
+    ;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
+    text-align: center;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid;
+}
+
+.mys {
+    grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    margin-left: -10px;
+}
+
+.wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+.igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
 }
 
 .menuLinksIzq {
@@ -1563,9 +1694,11 @@ input, select {
     ". . . . ."
     ". colTres colTres colTres ."
     ". . . . .";
-    grid-template-rows: 2% 15% 5% 5% 33% 5% 32% 8%;
+    grid-template-rows: 2% 15% 5% 3% 35% 5% 32% 8%;
     grid-template-columns: 5% 35% 20% 35% 5%;
     align-items: center;
+    background-image: linear-gradient(135deg, white 30%, white 30% 70%, #4d292f 70%);
+
 }
 
 .subtituloCol {
@@ -1579,6 +1712,7 @@ input, select {
     grid-area: colUno;
     font-family: 'Comfortaa';
     text-align: center;
+    margin: 10px;
 }
 
 .coleccionDos {
@@ -1658,13 +1792,53 @@ input, select {
 }
 
 .cuadroTablet {
+    display: grid;
+    grid-template-areas:
+    ". titulo titulo titulo titulo titulo ." 
+    ". wpp . tw . ig ."
+    ". wpp . tw . ig ."
+    ". . . . . . ."
+    ;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
+    text-align: center;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid;
+}
+
+.mys {
+    grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    margin-left: -10px;
+}
+
+.wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+.igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
 }
 
 .cuadroDer {
@@ -1696,6 +1870,8 @@ input, select {
     ;
     grid-template-rows: 2% 8% 10% 7% 10% 3% 7% 10% 17% 29%;
     grid-template-columns: repeat(3, 1fr);
+    background-image: linear-gradient(45deg, #4d292f 30%, white 30% 70%, white 70%);
+
 
 }
 
@@ -1794,13 +1970,53 @@ input, select {
 }
 
 .cuadroTablet {
+    display: grid;
+    grid-template-areas:
+    ". titulo titulo titulo titulo titulo ." 
+    ". wpp . tw . ig ."
+    ". wpp . tw . ig ."
+    ". . . . . . ."
+    ;
+    grid-template-columns: 6.25% 25% 6.25% 25% 6.25% 25%;
+    grid-template-rows: 45% 10% 35% 10%;
     grid-area: cuadro;
+    text-align: center;
     background-color: #4d292f;
-    border: solid 3px black;
+    border: black 3px solid;
+}
+
+.mys {
+    grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    margin-left: -10px;
+}
+
+.wppIconMobile {
+    grid-area: wpp;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.twIconMobile {
+    grid-area: tw;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
+}
+
+.igIconMobile {
+    grid-area: ig;
+    height: 100%;
+    width: 20%;
+    align-self: center;
+    justify-self: center;
 }
 
 .cuadroDer {
@@ -1831,6 +2047,8 @@ input, select {
 
     grid-template-rows: 1% 10% 5% 5% 13% 22% 8% 13% 23%;
     grid-template-columns: 30% 40% 30%;
+    background-image: linear-gradient(45deg, #4d292f 30%, white 30% 70%, white 70%);
+
 }
 
 .tituloViñedo {
@@ -1867,38 +2085,29 @@ input, select {
     font-family: 'Comfortaa';
     font-size: 15px;
     text-align: left;
+    -webkit-text-stroke: 0.35px white;
+
 }
 
 .imgsViñedoDer {
     grid-area: subImgDer;
     border-radius: 25px;
     border: solid #4d292f 3px;
-    transition: all 0.5s;
     width: 300px;
     height: 150px;
     margin-left: 40px;
 }
 
-.imgsViñedoDer:hover {
-    width: 330px;
-    height: 170px;
-
-}
 
 .imgsViñedoDerDos {
     grid-area: subImgDerDos;
     border-radius: 25px;
     border: solid #4d292f 3px;
-    transition: all 0.5s;
     width: 300px;
     height: 150px;
     margin-left: 40px;
 }
 
-.imgsViñedoDerDos:hover {
-    width: 330px;
-    height: 170px;
-}
 
 /* fin grids Viñedo tablet*/
 
@@ -1935,7 +2144,7 @@ input, select {
     ". . . . . . . ."
     ". . coleccion coleccion coleccion coleccion . ."
     ;
-    grid-template-columns: 15% 10% 10% 15% repeat(4, 1fr);
+    grid-template-columns: 15% 10% 10% 15% 13% 10% 12% 15%;
     grid-template-rows: 10% 5% 60% 1fr;
 
 }
@@ -1985,6 +2194,12 @@ input, select {
 
 .margenLinksIndex {
     margin: 20px;
+    align-self: center;
+}
+
+#alignC {
+text-align: center;
+text-justify: center;
 }
 
 ul {
@@ -2073,7 +2288,7 @@ ul {
 
 }
 
-.mys {
+.mysI {
     grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
@@ -2179,13 +2394,13 @@ input, select {
     font-family: 'Comfortaa';
     width: max-content;
     height: max-content;
-    transition: all 1s;
+    transition: all 0.5s;
     justify-self: center;
 }
 
 .botonIndex:hover {
     font-size: 27px;
-    height: 100px;
+    height: max-content;
 }
 
 .cosechaIndex {
