@@ -178,7 +178,7 @@ ul {
 
 .wppIcon {
     grid-area: wpp;
-    height: 80%;
+    height: 70%;
     width: 70%;
     align-self: center;
     justify-self: center;
@@ -186,7 +186,7 @@ ul {
 
 .twIcon {
     grid-area: tw;
-    height: 80%;
+    height: 70%;
     width: 70%;
     align-self: center;
     justify-self: center;
@@ -194,7 +194,7 @@ ul {
 
 .igIcon {
     grid-area: ig;
-    height: 80%;
+    height: 70%;
     width: 70%;
     align-self: center;
     justify-self: center;
@@ -324,7 +324,6 @@ input, select {
     display: none;
     grid-area: btnCos;
     font-family: 'Comfortaa';
-    transition: all 1s;
     font-size: 24px;
     width: max-content;
     height: max-content;
@@ -333,9 +332,7 @@ input, select {
 
 }
 
-#botonCosecha:hover {
-    font-size: 27px;
-}
+
 
 /* Fin Grids Index mobile */ 
 
@@ -474,7 +471,7 @@ body {
     grid-area: titulo;
     color: white;
     font-family: 'Cinzel';
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     justify-self: center;
     margin-right: 5px;
@@ -1444,7 +1441,7 @@ input, select {
         border: black 3px solid;
     }
 
-    .mys {
+    .mysC {
         grid-area: titulo;
         color: white;
         font-family: 'Cinzel';
@@ -1745,7 +1742,13 @@ input, select {
 
 .margenImgCol {
     margin-top: 10px;
+    border-radius: 15px;
+    border: solid white 5px;
+    width: 80%;
+    height: 60%;
+    
 }
+
 
 
 
@@ -2902,11 +2905,16 @@ nav ul {
  
 }
 
+
 .margenImgCol {
     margin-top: 10px;
     border-radius: 15px;
     border: solid white 5px;
+    width: 100%;
+    height: auto;
+    
 }
+
 
 
 /*Final Grids Coleccion desktop*/
